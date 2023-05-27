@@ -25,6 +25,7 @@ function enqueue_style() {
     
     if (is_page(11)) {
         wp_enqueue_style( 'page-style', get_asset_path('css', 'project/profile.min.css') );
+        wp_enqueue_style('btn', get_asset_path('css', 'component/btn.min.css'));
     }
     elseif(is_page(9)) {
         wp_enqueue_style('contact-form', get_asset_path('css', 'component/contact-form.min.css'));

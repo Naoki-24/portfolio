@@ -24,6 +24,10 @@ function get_subtitle() {
         $subtitle = 'PROFILE';
     }
 
+    elseif (is_page(3)) {
+        $subtitle = 'PRIVACY POLICY';
+    }
+
     elseif(is_404()){
         $subtitle = '404';
     }
