@@ -1,0 +1,22 @@
+@use 'variable' as *;
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+    color: $black;
+    line-height: 1.45;
+}
+
+a {
+    color: $prime-color;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+p {
+    padding-bottom: 1em;
+}

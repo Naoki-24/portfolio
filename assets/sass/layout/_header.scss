@@ -1,0 +1,54 @@
+@use '../foundation/mixin' as *;
+@use '../utility/text.scss'as *;
+@use '../foundation/variable' as *;
+
+.l-header {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+    
+    &__inner {
+        padding: 8px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__logo {
+         height: 60px;
+    }
+}
+
+.c-gnav {
+    @include centering;
+    gap: 2em;
+    a {
+        @include no-styled-a;
+        @include text('title', 's');
+    }
+    li:last-child {
+        & a {
+            color: #fff;
+        
+            &::before {
+                content: '';
+                @include icon-svg;
+                mask-image: url(../img/envelope.svg);
+                -webkit-mask-image: url(../img/envelope.svg);
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $white;
+            }
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+
+header a {
+    text-decoration: none;
+}

@@ -1,0 +1,20 @@
+@use '../foundation/mixin' as *;
+@use '../foundation/variable' as *;
+
+.p-section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+    &__sub {
+        color: $gray;
+        @include text('subtitle', 'l');
+        padding-bottom: 1rem;
+    }
+
+    &__h2 {
+        @include text('title', 'l');
+    }
+
+    @media (max-width: $break-tab) {
+        margin-bottom: 3rem;
+    }
+}

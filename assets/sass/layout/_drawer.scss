@@ -1,0 +1,41 @@
+.l-drawer {
+
+    &__btn {
+        // z-index: 1005;
+        position: relative;
+    }
+    
+    &__bg {
+        z-index: 5;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #292929;
+        opacity: 0;
+        transform: translateX(100%);
+        cursor: pointer;
+        transition: .3s;
+        
+        &.active {
+            transform: translate(0);
+            opacity: .4;
+        }
+    }
+    
+    
+    &__main {
+        position: fixed;
+        opacity: 0;
+        transform: translateX(100%);
+        right: 0;
+        top: 0;
+        z-index: 900;
+
+        &.active {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+}

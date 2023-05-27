@@ -1,0 +1,47 @@
+@use '../foundation/variable' as *;
+
+.u-hidden {
+    display: none;
+}
+
+.u-flex {
+    display: flex;
+    align-items: center;
+    @media (max-width: $break-sp) {
+        flex-direction: column;
+        & > * {
+            width: 100%;
+        }
+    }
+}
+
+.u-prime {
+    color: $prime-color;
+}
+
+.u-pc {
+    @media (max-width: $break-tab) {
+        display: none!important;
+    }
+}
+.u-tab {
+    display: none!important;
+    @media (max-width: $break-tab) {
+        display: block!important;
+    }
+}
+.u-sp {
+    display: none!important;
+    @media (max-width: $break-sp) {
+        display: block!important;
+    }
+}
+
+.u-left {
+    display: inline-block;
+    text-align: left;
+}
+
+.u-fs-s {
+    font-size: .8em;
+}

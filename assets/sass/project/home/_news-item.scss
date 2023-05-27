@@ -1,0 +1,40 @@
+@use '../utility/text' as *;
+@use '../foundation/variable' as *;
+
+.p-news-item {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.35);
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+        @media (max-width: $break-tab) {
+            display: block;
+        }
+    }
+
+    &__date {
+        @include text('subtitle', 's');
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: rgba(53,62,77,.8);
+    }
+
+    &__title {
+        @include text('subtitle', 'm');
+        display: inline-block;
+        width: 60%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        @media (max-width: $break-tab) {
+            width: 100%;
+            display: block;
+            padding-top: .8em;
+            white-space: normal;
+        }
+    }
+}

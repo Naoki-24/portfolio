@@ -1,0 +1,27 @@
+@use '../utility/text' as *;
+
+.c-label {
+    border-radius: 5px;
+    display: inline-block;
+    white-space: nowrap;
+
+    &--gray {
+        color: rgba(53, 62, 77, 0.8);
+        background-color: rgba(221, 228, 236, 0.8);
+    }
+
+    &--red {
+        color: #BF1822;
+        background: #FFE0E0CC;
+    }
+
+    &--s {
+        @include text('subtitle', 'xs');
+        padding: .25rem .1875rem;
+    }
+
+    &--m {
+        @include text('subtitle', 's');
+        padding: .25rem .625rem;
+    }
+}

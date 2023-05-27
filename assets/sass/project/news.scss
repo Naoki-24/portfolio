@@ -1,0 +1,54 @@
+@use '../utility/text' as *;
+@use '../foundation/variable' as *;
+@use '../foundation/mixin' as *;
+
+.p-news-container {
+    @include bg;
+}
+
+.p-news-list {
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+}
+
+.p-news-item {
+    background-color: $white;
+
+    & a {
+        text-decoration: none;
+    }
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        padding: .8rem 1.2rem;
+        @media (max-width: $break-tab) {
+            display: block;
+        }
+    }
+
+    &__date {
+        @include text('subtitle', 's');
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: $prime-color;
+    }
+
+    &__title {
+        @include text('subtitle', 'm');
+        display: inline-block;
+        width: 60%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        @media (max-width: $break-tab) {
+            width: 100%;
+            display: block;
+            padding-top: .8em;
+            white-space: normal;
+        }
+    }
+}

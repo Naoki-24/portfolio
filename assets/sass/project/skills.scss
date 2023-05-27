@@ -1,0 +1,17 @@
+@use '../utility/text' as *; 
+
+.p-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: start;
+    margin-bottom: 4rem;
+}
+
+.p-skills {
+    padding-top: 2rem;
+    &__h2 {
+        @include text('title', 'xm');
+        padding-bottom: 1.5rem;
+    }
+}

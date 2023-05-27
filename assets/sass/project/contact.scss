@@ -1,0 +1,12 @@
+@use '../utility/text' as *;
+@use '../foundation/mixin' as *;
+
+.p-contact {
+    @include bg;
+
+    &__title {
+        text-align: center;
+        @include text('title', 'xm');
+        margin-bottom: 3rem;
+    }
+}

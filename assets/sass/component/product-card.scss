@@ -1,0 +1,83 @@
+@use '../foundation/variable' as *;
+
+.c-product-card {
+    border-radius: 25px;
+    border: 5px solid $prime-color;
+    box-shadow: 11px 13px 27px 6px rgba(0, 0, 0, 0.08);
+    background-color: $white;
+
+    &--archive {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+        width: calc((100% - 20px*2)/3);
+        @media (max-width:$break-pc) {
+            width: calc((100% - 20px)/2);
+        }
+        @media (max-width:$break-sp) {
+            width: 100%;
+        }
+    }
+
+    &__inner {
+        padding: 2.5rem 1.5rem;
+        @media (max-width: $break-sp) {
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    &__img {
+        margin-bottom: 1.25rem;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+    
+        tr, th, td {
+            padding: .5rem;
+            @media (max-width: $break-sp) {
+                padding: .3rem;
+            }
+        }
+    
+        tr {
+            font-size: .75rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.35);
+            
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+        th {
+            width: 100px;
+            border-right: 1px dashed rgba(0, 0, 0, 0.35);
+            white-space: nowrap;
+            @media (max-width: $break-sp) {
+                width: 80px;
+            }
+        }
+        td {
+            text-align: center;
+    
+            & span:not(:last-of-type)::after {
+                content: " / ";
+            }
+            &:has(span:nth-of-type(2)) span{
+                font-size: .8em;
+            }
+        }
+    }
+
+    .c-label {
+        font-size: .625rem!important;
+
+        &::after {
+            content: none!important;
+        }
+
+        &:not(:first-of-type) {
+            margin-left: .5rem;
+        }
+    }
+}

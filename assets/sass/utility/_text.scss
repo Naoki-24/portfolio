@@ -1,0 +1,74 @@
+@use '../foundation/variable' as *;
+
+@mixin text($type, $size) {
+    @if $type == 'title' {
+        font-weight: 900;
+
+        @if $size == 'xl' {
+            font-size: 3.375rem;
+            @media screen and (max-width
+            : $break-sp) {
+                font-size: 2.25rem;
+            }
+        }
+        @else if $size == 'l' {
+            font-size: 3rem;
+            @media screen and (max-width: $break-sp) {
+                font-size: 1.5rem;
+            }
+        }
+        @else if $size == 'xm' {
+            font-size: 1.5rem;
+            @media screen and (max-width: $break-sp) {
+                font-size: 1.25rem;
+            }
+        }
+        @else if $size == 'm' {
+            font-weight: 500;
+            font-size: 1.125rem;
+            @media screen and (max-width: $break-sp) {
+                font-size: .875rem;
+                font-weight: 700;
+            }
+        }
+        @else if $size == 's' {
+            font-weight: 700;
+            font-size: .875rem;
+            @media screen and (max-width: $break-sp) {
+                font-size: 0.8125rem;
+            }
+        }
+    }
+    @else if $type == 'subtitle' {
+        @if $size == 'l' {
+            font-weight: 700;
+            font-size: 1.25rem;
+            @media screen and (max-width: $break-sp) {
+                font-size: 1rem;
+            }
+        }
+        @else if $size == 'm' {
+            font-weight: 500;
+            font-size: 1.125rem;
+            @media screen and (max-width: $break-sp) {
+                font-size: 1rem;
+            }
+        }
+        @else if $size == 's' {
+            font-weight: 500;
+            font-size: .875rem;
+        }
+        @else if $size == 'xs' {
+            font-weight: 700;
+            font-size: .625rem;
+            line-height: 1.48;
+            @media screen and (max-width: $break-sp) {
+                font-size: .5rem;
+            }
+        }
+    }
+    @else {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}

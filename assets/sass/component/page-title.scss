@@ -1,0 +1,33 @@
+@use '../component/breadcrumb';
+@use '../utility/text' as *;
+
+.c-page-title-wrapper {
+    padding-top: 80px;
+}
+
+.c-page-title-container {
+    width: 100%;
+    height: calc(300px + 5vw);
+    background: url(../../img/title-bg.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-page-title {
+    span {
+        display: block;
+        text-align: center;
+        color: #fff;
+    }
+
+    &--en {
+        @include text('title', 'xl');
+        letter-spacing: .15em;
+    }
+
+    &--ja {
+        @include text('subtitle', 'l')
+    }
+}

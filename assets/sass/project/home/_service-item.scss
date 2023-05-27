@@ -1,0 +1,140 @@
+@use '../utility/text' as *;
+@use '../foundation/variable' as *;
+
+.p-service-item {
+    background: #fff;
+    -webkit-box-shadow: 11px 13px 27px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 11px 13px 27px 6px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 540px;
+
+    @media (max-width: 1200px) {
+        width: 42.8vw;
+        height: 26vw;
+    }
+
+    @media (max-width: 930px) {
+        height: 30vw;
+    }
+
+    @media (max-width: $break-tab) {
+        width: 45vw;
+    }
+
+    @media (max-width: $break-sp) {
+        width: 100%;
+        height: 70vw;
+    }
+    
+    &::before {
+        content: "";
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 302px;
+
+        @media (max-width: 1200px) {
+            width: 20.8vw;
+        }
+        @media (max-width: $break-sp) {
+            width: 50vw;
+        }
+    }
+    
+    &--website::before {
+        background-image: url(../../img/mockup2.webp);
+        background-position: center 30px;
+    }
+
+    &--coding::before {
+        background-image: url(../../img/coding.jpg);
+    }
+
+    &--modification::before {
+        background-image: url(../../img/modification.png);
+    }
+
+    &--banner::before {
+        background-image: url(../../img/banner.png);
+        background-position: right;
+    }
+
+    &::after {
+        content: "";
+        background-color: #fff;
+        height: 120%;
+        width: 556px;
+        z-index: 10;
+        right: -240px;
+        top: 20px;
+        position: absolute;
+        transform: rotate(15deg) translateX(0);
+
+        @media (max-width: 1200px) {
+            width: 38.6vw;
+            right: -12.6vw;
+            top: 1.38vw;
+        }
+
+        @media (max-width: $break-tab) {
+            right: -9.6vw;
+        }
+
+        @media (max-width: $break-sp) {
+            right: 0vw;
+            width: 60vw;
+        }
+    }
+
+    &__detail {
+        padding: 3rem 2.5rem 3rem 260px;
+        position: relative;
+        z-index: 11;
+        height: 100%;
+
+        @media (max-width: 1200px) {
+            padding: 1.5rem  1rem 1.5rem 19.4vw;
+        }
+
+        @media (max-width: 930px) and (min-width: $break-sp) {
+            padding-top: 2vw;
+        }
+
+        @media (max-width: $break-sp) {
+            padding-left: 40vw;
+        }
+    }
+
+    &__cap {
+        @include text('subtitle', 's');
+        padding-bottom: .8rem;
+        text-align: right;
+        @media (max-width: 930px) and (min-width: $break-sp) {
+            font-size: 1.5vw;
+            padding-bottom: 1.2vw;
+        }
+    }
+
+    &__title {
+        @include text('title', 'xm');
+        text-align: right;
+        padding-bottom: 1.5rem;
+        @media (max-width: 930px) and (min-width: $break-sp) {
+            font-size: 2.2vw;
+            padding-bottom: 2.2vw;
+        }
+    }
+
+    &__description {
+        padding-bottom: 0;
+        @media (max-width: 930px) and (min-width: $break-sp) {
+            font-size: 1.8vw;
+        }
+    }
+}

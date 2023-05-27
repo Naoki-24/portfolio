@@ -1,0 +1,67 @@
+@use '../foundation/variable' as *;
+
+.c-btn {
+    box-shadow: 0px 8px 8px rgba(42, 171, 159, 0.4);
+    border-radius: 9999px;
+    display: inline-block;
+    width: max-content;
+
+    &__link {
+        font-size: 1rem;
+        font-weight: 900;
+        white-space: nowrap;
+        color: inherit;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            display: inline-block;
+            mask-image: url(http://localhost:3000/wp-content/themes/portfolio/portfolio/assets/img/arrow-right.svg);
+            -webkit-mask-image: url(http://localhost:3000/wp-content/themes/portfolio/portfolio/assets/img/arrow-right.svg);
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+    @media (max-width: $break-sp) {
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    // size
+    &--s {
+        padding: .75rem 1rem;
+    }
+
+    &--m {
+        padding: .75rem 1.25rem;
+    }
+
+    &--l {
+        padding: 1.25rem 2.5rem;
+    }
+
+    // color
+    &--prime {
+        background-color: $prime-color;
+        color: $white;
+        & a::after {
+            background-color: $white;
+        }
+    }
+
+    &--second {
+        background-color: $white;
+        color: $prime-color;
+        border: 1px solid $prime-color;
+        & a::after {
+            background-color: $prime-color;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use '../foundation/mixin' as *;
+@use '../foundation/variable' as *;
+
+.l-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.l-inner {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    @media (max-width: $break-tab) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media (max-width: $break-sp) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.l-site-inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.l-full-width {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+section {
+    padding-bottom: 4rem;
+    padding-top: 5rem;
+    @media (max-width: $break-sp) {
+        padding-top: 3rem;
+    }
+}
+section:first-of-type {
+    padding-top: 0;
+}
